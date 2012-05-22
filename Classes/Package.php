@@ -1,5 +1,5 @@
 <?php
-namespace Assetic;
+namespace Twitter\Bootstrap;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "Assetic".                    *

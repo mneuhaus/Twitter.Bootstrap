@@ -7,8 +7,9 @@ $cssBundles = array(
 
 $path = getcwd();
 
-$assets = 'Bundles:
-  CSS:';
+$assets = 'Assets:
+  Bundles:
+    CSS:';
 foreach ($cssBundles as $name => $file) {
 	$content = file_get_contents($path . "/Resources/" . $file);
 	preg_match_all('/@import.*"(.+)"/', $content, $matches);
@@ -19,8 +20,8 @@ foreach ($cssBundles as $name => $file) {
 	$content = str_replace(" */", "#", $content);
 	$content = str_replace(" *", "#", $content);
 	$content = str_replace("//", "#", $content);
-	$assets.= prependText("\n" . $name . ":", 4) . "\n";
-	$assets.= prependText($content, 6);
+	$assets.= prependText("\n" . $name . ":", 6) . "\n";
+	$assets.= prependText($content, 8);
 
 }
 
@@ -32,6 +33,6 @@ function prependText($text, $spaces = 2) {
 	return implode("\n", $lines);
 }
 
-file_put_contents("Configuration/Assets.yaml", $assets);
+file_put_contents("Configuration/Settings.yaml", $assets);
 
 ?>
