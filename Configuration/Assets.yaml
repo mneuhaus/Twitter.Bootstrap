@@ -1,10 +1,3 @@
-Twitter:
-  Bootstrap:
-    viewHelpers:
-      partialRootPath: 'resource://Twitter.Bootstrap/Private/Partials/'
-      templates:
-        'Twitter\Bootstrap\ViewHelpers\Navigation\MenuViewHelper': 'resource://Twitter.Bootstrap/Private/Templates/Navigation/Menu.html'
-
 Assets:
   Bundles:
     CSS:      
